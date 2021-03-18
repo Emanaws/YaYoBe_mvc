@@ -1,0 +1,30 @@
+﻿@model IEnumerable<YaYoBe_mvc.Models.Faculty>
+
+@{
+    ViewBag.Title = "Faculty";
+}
+
+<h2>Faculty List</h2>
+
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Faculty Id</th>
+            <th>Faculty Name</th>
+            <th>Detail</th>
+            <th>Update</th>
+        </tr>
+    </thead>
+    @{
+        foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.FacultyId</td>
+            <td>@item.FacultyName</td>
+            <td><a href="#"></a>Detail</td>
+            <td><a href="#"></a>Update</td>
+
+        </tr>
+        }
+    }
+</table>

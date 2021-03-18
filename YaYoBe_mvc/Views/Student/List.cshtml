@@ -1,0 +1,28 @@
+﻿@model IEnumerable <YaYoBe_mvc.Models.Student>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Student Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    @{
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.StudentId</td>
+                <td>@item.FName</td>
+                <td>@item.LName</td>
+                <td>@item.Gender</td>
+            </tr>
+        }
+    }
+</table>
